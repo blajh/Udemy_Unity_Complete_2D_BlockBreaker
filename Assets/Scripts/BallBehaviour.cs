@@ -6,6 +6,8 @@ using UnityEngine;
 public class BallBehaviour : MonoBehaviour
 {
 	[SerializeField] Paddle paddle1;
+	[SerializeField] float xPushForce = 2f;
+	[SerializeField] float yPushForce = 10f;
 	private Vector2 paddleToBallVector;
 	private bool hasBeenLaunched = false;
 
@@ -32,7 +34,7 @@ public class BallBehaviour : MonoBehaviour
 	private void LaunchOnMouseClick() {
 		if (Input.GetMouseButtonDown(0)) {
 			hasBeenLaunched = true;
-			GetComponent<Rigidbody2D>().velocity = new Vector2(2f, 15f);
+			GetComponent<Rigidbody2D>().velocity = new Vector2(xPushForce, yPushForce);
 		}
 	}
 }
