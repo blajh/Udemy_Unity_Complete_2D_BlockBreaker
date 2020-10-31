@@ -5,7 +5,7 @@ using UnityEngine;
 public class Paddle : MonoBehaviour
 {
 	[SerializeField]
-	private float screenWidthInUnits = 11.7f;
+	private float _screenWidthInUnits = 11.7f;
 
     void Update()
     {
@@ -13,9 +13,9 @@ public class Paddle : MonoBehaviour
     }
 
 	public void UpdatePaddlePosition() {
-        float mousePositionInUnits = Input.mousePosition.x / Screen.width * screenWidthInUnits;
+        float mousePositionInUnits = Input.mousePosition.x / Screen.width * _screenWidthInUnits;
         Vector2 currentPosition = new Vector2(transform.position.x, transform.position.y);
-		currentPosition.x = Mathf.Clamp(mousePositionInUnits, 0f, screenWidthInUnits);
+		currentPosition.x = Mathf.Clamp(_mousePositionInUnits, 0f, _screenWidthInUnits);
         transform.position = currentPosition; 
     }
 } 
