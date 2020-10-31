@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 14924120}
   - component: {fileID: 14924119}
   - component: {fileID: 14924122}
+  - component: {fileID: 14924121}
   m_Layer: 0
   m_Name: Paddle
   m_TagString: Untagged
@@ -197,12 +198,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 14924118}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.96, y: 0, z: 0}
+  m_LocalPosition: {x: 5.84, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1184700949}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &14924121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14924118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe5edd335805b4a14bf430662d46c926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screenWidthInUnits: 11.7
 --- !u!70 &14924122
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -479,6 +493,7 @@ GameObject:
   - component: {fileID: 668728421}
   - component: {fileID: 668728423}
   - component: {fileID: 668728424}
+  - component: {fileID: 668728425}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -544,7 +559,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 668728420}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.16, y: 5.43, z: -5.82}
+  m_LocalPosition: {x: 6.479, y: 0.431, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1184700949}
@@ -587,6 +602,19 @@ CircleCollider2D:
   m_Offset: {x: 0.21333334, y: 0.21333334}
   serializedVersion: 2
   m_Radius: 0.21333334
+--- !u!114 &668728425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668728420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ced526437c7aa44c294552a81f7c81fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paddle1: {fileID: 14924121}
 --- !u!1 &738631110
 GameObject:
   m_ObjectHideFlags: 0
@@ -759,8 +787,9 @@ GameObject:
   m_Component:
   - component: {fileID: 942722382}
   - component: {fileID: 942722383}
+  - component: {fileID: 942722384}
   m_Layer: 0
-  m_Name: LoseColliderTrigger
+  m_Name: LoseCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -774,7 +803,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 942722381}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.6, y: -0.57, z: 0}
+  m_LocalPosition: {x: 6.6, y: -1.33, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1184700949}
@@ -806,6 +835,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 13.392236, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &942722384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942722381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19e398e5f8f884dc4ae0e9104d710a57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1092966943
 GameObject:
   m_ObjectHideFlags: 0
@@ -1457,7 +1498,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1906105395}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.94, y: 1.95, z: 0}
+  m_LocalPosition: {x: 2.73, y: 1.95, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1184700949}

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveWithMouse : MonoBehaviour
+public class Paddle : MonoBehaviour
 {
 	[SerializeField]
 	private float screenWidthInUnits = 11.7f;
@@ -14,8 +14,8 @@ public class MoveWithMouse : MonoBehaviour
 
 	public void UpdatePaddlePosition() {
         float mousePositionInUnits = Input.mousePosition.x / Screen.width * screenWidthInUnits;
-		float mousePostionClamped = Mathf.Clamp(mousePositionInUnits, 0f, screenWidthInUnits);
-        Vector3 mousePositionFinal = new Vector3(mousePostionClamped, 0f, 0f);
-        transform.position = mousePositionFinal;
+        Vector2 currentPosition = new Vector2(transform.position.x, transform.position.y);
+		currentPosition.x = Mathf.Clamp(mousePositionInUnits, 0f, screenWidthInUnits);
+        transform.position = currentPosition; 
     }
 } 
