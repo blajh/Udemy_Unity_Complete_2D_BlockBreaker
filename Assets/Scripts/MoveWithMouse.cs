@@ -6,6 +6,7 @@ public class MoveWithMouse : MonoBehaviour
 {
     private float screenWidthToGameplayUnitRatio;
     private float mousePosition;
+    private float clampedPoition;
     private Vector3 wantedPosition;
 
 
@@ -17,7 +18,8 @@ public class MoveWithMouse : MonoBehaviour
 	public void UpdatePaddlePosition() {
         screenWidthToGameplayUnitRatio = 11.7f / Screen.width;
         mousePosition = Input.mousePosition.x * screenWidthToGameplayUnitRatio;
-        wantedPosition = new Vector3(mousePosition, 0f, 0f);
+        clampedPoition = Mathf.Clamp(mousePosition, 0f, 11.7f);
+        wantedPosition = new Vector3(clampedPoition, 0f, 0f);
         transform.SetPositionAndRotation(wantedPosition, transform.rotation);
     }
 }
