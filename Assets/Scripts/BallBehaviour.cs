@@ -11,6 +11,8 @@ public class BallBehaviour : MonoBehaviour
 	private Vector2 paddleToBallVector;
 	private bool hasBeenLaunched = false;
 
+	[SerializeField] AudioClip[] audioClips;
+
 	private void Start() {
 		CalculateOffsetToPaddle();
 	}
@@ -35,6 +37,13 @@ public class BallBehaviour : MonoBehaviour
 		if (Input.GetMouseButtonDown(0)) {
 			hasBeenLaunched = true;
 			GetComponent<Rigidbody2D>().velocity = new Vector2(xPushForce, yPushForce);
+		}
+	}
+
+	private void OnCollisionEnter2D(Collision2D collision) {
+		if (hasBeenLaunched) {
+			AudioClip audioClip = audioClips[UnityEngine.Random.Range(0, audioClips.Length)];
+			GetComponent<AudioSource>().PlayOneShot(audioClip);
 		}
 	}
 }
