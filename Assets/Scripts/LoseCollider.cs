@@ -8,7 +8,7 @@ public class LoseCollider : MonoBehaviour
 	private void OnTriggerEnter2D(Collider2D collision) {
 		Debug.Log("GameOver");
 		Debug.Log(collision);
-		//SceneManager.LoadScene("GameOver"); 
+		SceneManager.LoadScene("GameOver"); 
 	}
 
 }
