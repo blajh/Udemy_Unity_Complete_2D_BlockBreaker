@@ -13,6 +13,17 @@ public class GameStatus : MonoBehaviour
 
 	public TMP_Text scoreText;
 
+	private void Awake() {
+		int gameStatusCount = FindObjectsOfType<GameStatus>().Length;
+		if (gameStatusCount > 1) {
+			Destroy(gameObject);
+		}
+
+		else {
+			DontDestroyOnLoad(gameObject);
+		}
+	}
+
 	private void Start() {
 		UpdateScoreUI();
 	}
