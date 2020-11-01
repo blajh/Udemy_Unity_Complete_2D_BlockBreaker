@@ -1582,7 +1582,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3719851125074051709, guid: 0c66e71b2389e4b0184a683c1f39d0c5,
         type: 3}
-      propertyPath: paddle1
+      propertyPath: _paddle1
       value: 
       objectReference: {fileID: 14924121}
     m_RemovedComponents: []

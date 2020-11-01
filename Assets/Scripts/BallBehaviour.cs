@@ -13,7 +13,7 @@ public class BallBehaviour : MonoBehaviour
 	private bool _hasBeenLaunched = false;
 
 	[SerializeField]
-	private AudioClip[] _audioClips;
+	private AudioClip[] _ballAudioClips;
 	private AudioSource _audioSource;
 
 	private void Start() {
@@ -46,7 +46,7 @@ public class BallBehaviour : MonoBehaviour
 
 	private void OnCollisionEnter2D(Collision2D collision) {
 		if (_hasBeenLaunched) {
-			AudioClip randomAudioClip = _audioClips[UnityEngine.Random.Range(0, _audioClips.Length)];
+			AudioClip randomAudioClip = _ballAudioClips[UnityEngine.Random.Range(0, _ballAudioClips.Length)];
 			_audioSource.PlayOneShot(randomAudioClip);
 		}
 	}

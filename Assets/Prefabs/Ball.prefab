@@ -134,9 +134,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ced526437c7aa44c294552a81f7c81fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paddle1: {fileID: 0}
-  xPushForce: 2
-  yPushForce: 15
+  _paddle1: {fileID: 0}
+  _xPushForce: 2
+  _yPushForce: 10
+  _ballAudioClips:
+  - {fileID: 8300000, guid: 77b6a930fb65042b595418e87c49446b, type: 3}
+  - {fileID: 8300000, guid: 08a867e36e82f41f5ae33d6d43faf7ef, type: 3}
+  - {fileID: 8300000, guid: 57ceb7cc04e9945159bd0d8b953e0b34, type: 3}
+  - {fileID: 8300000, guid: ac37baabd80d5423a881e29cca937ad7, type: 3}
+  - {fileID: 8300000, guid: 64550776ec75a4b32800d77d90fc4053, type: 3}
 --- !u!82 &8608450070406122845
 AudioSource:
   m_ObjectHideFlags: 0
@@ -147,7 +153,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 08a867e36e82f41f5ae33d6d43faf7ef, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
