@@ -40,6 +40,7 @@ public class BallBehaviour : MonoBehaviour
 	private void LaunchOnMouseClick() {
 		if (Input.GetMouseButtonDown(0)) {
 			_hasBeenLaunched = true;
+			GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
 			GetComponent<Rigidbody2D>().velocity = new Vector2(_xPushForce, _yPushForce);
 		}
 	}
