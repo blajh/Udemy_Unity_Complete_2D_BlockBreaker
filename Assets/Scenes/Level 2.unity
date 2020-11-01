@@ -133,6 +133,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlockRed (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1279695353664811205, guid: fceb0dc2122f0464da0cb107bac442f2,
+        type: 3}
+      propertyPath: _levelManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1279695353664811207, guid: fceb0dc2122f0464da0cb107bac442f2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -207,6 +212,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BlockRed (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279695353664811205, guid: fceb0dc2122f0464da0cb107bac442f2,
+        type: 3}
+      propertyPath: _levelManager
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1279695353664811207, guid: fceb0dc2122f0464da0cb107bac442f2,
         type: 3}
@@ -337,6 +347,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlockRed (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1279695353664811205, guid: fceb0dc2122f0464da0cb107bac442f2,
+        type: 3}
+      propertyPath: _levelManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1279695353664811207, guid: fceb0dc2122f0464da0cb107bac442f2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -411,6 +426,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BlockRed (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279695353664811205, guid: fceb0dc2122f0464da0cb107bac442f2,
+        type: 3}
+      propertyPath: _levelManager
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1279695353664811207, guid: fceb0dc2122f0464da0cb107bac442f2,
         type: 3}
@@ -487,6 +507,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1279695353664811205, guid: e0e53e98e8440441bba211651317b185,
+        type: 3}
+      propertyPath: _levelManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1279695353664811207, guid: e0e53e98e8440441bba211651317b185,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -562,6 +587,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlockRed (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1279695353664811205, guid: fceb0dc2122f0464da0cb107bac442f2,
+        type: 3}
+      propertyPath: _levelManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1279695353664811207, guid: fceb0dc2122f0464da0cb107bac442f2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -625,6 +655,75 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 819929677}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &832224587
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4872912093988054656, guid: 18a35daaefaed4d32bdac1e86d99b3e5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872912093988054656, guid: 18a35daaefaed4d32bdac1e86d99b3e5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872912093988054656, guid: 18a35daaefaed4d32bdac1e86d99b3e5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872912093988054656, guid: 18a35daaefaed4d32bdac1e86d99b3e5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872912093988054656, guid: 18a35daaefaed4d32bdac1e86d99b3e5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872912093988054656, guid: 18a35daaefaed4d32bdac1e86d99b3e5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872912093988054656, guid: 18a35daaefaed4d32bdac1e86d99b3e5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872912093988054656, guid: 18a35daaefaed4d32bdac1e86d99b3e5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872912093988054656, guid: 18a35daaefaed4d32bdac1e86d99b3e5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872912093988054656, guid: 18a35daaefaed4d32bdac1e86d99b3e5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872912093988054656, guid: 18a35daaefaed4d32bdac1e86d99b3e5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872912093988054658, guid: 18a35daaefaed4d32bdac1e86d99b3e5,
+        type: 3}
+      propertyPath: m_Name
+      value: LevelManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 18a35daaefaed4d32bdac1e86d99b3e5, type: 3}
 --- !u!1001 &910574648
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -636,6 +735,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Block (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279695353664811205, guid: e0e53e98e8440441bba211651317b185,
+        type: 3}
+      propertyPath: _levelManager
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1279695353664811207, guid: e0e53e98e8440441bba211651317b185,
         type: 3}
@@ -712,6 +816,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1279695353664811205, guid: e0e53e98e8440441bba211651317b185,
+        type: 3}
+      propertyPath: _levelManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1279695353664811207, guid: e0e53e98e8440441bba211651317b185,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -787,6 +896,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlockRed (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1279695353664811205, guid: fceb0dc2122f0464da0cb107bac442f2,
+        type: 3}
+      propertyPath: _levelManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1279695353664811207, guid: fceb0dc2122f0464da0cb107bac442f2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -861,6 +975,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BlockRed (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279695353664811205, guid: fceb0dc2122f0464da0cb107bac442f2,
+        type: 3}
+      propertyPath: _levelManager
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1279695353664811207, guid: fceb0dc2122f0464da0cb107bac442f2,
         type: 3}
@@ -943,6 +1062,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1279695353664811205, guid: e0e53e98e8440441bba211651317b185,
+        type: 3}
+      propertyPath: _levelManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1279695353664811207, guid: e0e53e98e8440441bba211651317b185,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1017,6 +1141,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Block (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279695353664811205, guid: e0e53e98e8440441bba211651317b185,
+        type: 3}
+      propertyPath: _levelManager
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1279695353664811207, guid: e0e53e98e8440441bba211651317b185,
         type: 3}
@@ -1093,6 +1222,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1279695353664811205, guid: e0e53e98e8440441bba211651317b185,
+        type: 3}
+      propertyPath: _levelManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1279695353664811207, guid: e0e53e98e8440441bba211651317b185,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1167,6 +1301,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BlockRed (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279695353664811205, guid: fceb0dc2122f0464da0cb107bac442f2,
+        type: 3}
+      propertyPath: _levelManager
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1279695353664811207, guid: fceb0dc2122f0464da0cb107bac442f2,
         type: 3}
@@ -1243,6 +1382,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1279695353664811205, guid: e0e53e98e8440441bba211651317b185,
+        type: 3}
+      propertyPath: _levelManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1279695353664811207, guid: e0e53e98e8440441bba211651317b185,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1317,6 +1461,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Block (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279695353664811205, guid: e0e53e98e8440441bba211651317b185,
+        type: 3}
+      propertyPath: _levelManager
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1279695353664811207, guid: e0e53e98e8440441bba211651317b185,
         type: 3}
@@ -1393,6 +1542,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1279695353664811205, guid: e0e53e98e8440441bba211651317b185,
+        type: 3}
+      propertyPath: _levelManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1279695353664811207, guid: e0e53e98e8440441bba211651317b185,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1467,6 +1621,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BlockRed (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279695353664811205, guid: fceb0dc2122f0464da0cb107bac442f2,
+        type: 3}
+      propertyPath: _levelManager
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1279695353664811207, guid: fceb0dc2122f0464da0cb107bac442f2,
         type: 3}
@@ -1624,6 +1783,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1279695353664811205, guid: e0e53e98e8440441bba211651317b185,
+        type: 3}
+      propertyPath: _levelManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1279695353664811207, guid: e0e53e98e8440441bba211651317b185,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1699,6 +1863,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlockRed
       objectReference: {fileID: 0}
+    - target: {fileID: 1279695353664811205, guid: fceb0dc2122f0464da0cb107bac442f2,
+        type: 3}
+      propertyPath: _levelManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1279695353664811207, guid: fceb0dc2122f0464da0cb107bac442f2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1767,6 +1936,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BlockRed (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279695353664811205, guid: fceb0dc2122f0464da0cb107bac442f2,
+        type: 3}
+      propertyPath: _levelManager
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1279695353664811207, guid: fceb0dc2122f0464da0cb107bac442f2,
         type: 3}
@@ -1861,6 +2035,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1279695353664811205, guid: e0e53e98e8440441bba211651317b185,
+        type: 3}
+      propertyPath: _levelManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1279695353664811207, guid: e0e53e98e8440441bba211651317b185,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1936,6 +2115,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlockRed (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1279695353664811205, guid: fceb0dc2122f0464da0cb107bac442f2,
+        type: 3}
+      propertyPath: _levelManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1279695353664811207, guid: fceb0dc2122f0464da0cb107bac442f2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2010,6 +2194,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Block
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279695353664811205, guid: e0e53e98e8440441bba211651317b185,
+        type: 3}
+      propertyPath: _levelManager
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1279695353664811207, guid: e0e53e98e8440441bba211651317b185,
         type: 3}

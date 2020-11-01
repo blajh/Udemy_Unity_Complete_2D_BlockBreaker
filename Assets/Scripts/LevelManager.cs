@@ -6,23 +6,25 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-	private GameObject[] _blocks;
-	private int _blockCount;
+	[SerializeField] private int _blockCount;
+	private SceneLoader _sceneLoader;
 
-	private void Update() {
-		CheckBoxes();
+	private void Start() {
+		_sceneLoader = FindObjectOfType<SceneLoader>();
 	}
 
-	private void CheckBoxes() {
-		CountBlocks();
+	public void AddBlock() {
+		_blockCount++;
+	}
+
+	public void BlockDestroyed() {
+		_blockCount--;
+		CheckBlocks();
+	}
+
+	private void CheckBlocks() {
 		if (_blockCount <= 0) {
-			int sceneIndex = SceneManager.GetActiveScene().buildIndex;
-			SceneManager.LoadScene(sceneIndex + 1);
+			_sceneLoader.LoadNextScene();
 		}
-	}
-
-	private void CountBlocks() {
-		_blocks = GameObject.FindGameObjectsWithTag("Block");
-		_blockCount = _blocks.Length;
 	}
 }
