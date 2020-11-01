@@ -11,12 +11,12 @@ public class Block : MonoBehaviour
 	private void Start() {
 		_levelManager = FindObjectOfType<LevelManager>();
 		_levelManager.AddBlock();
-		_gameStatus = FindObjectOfType<GameStatus>();
 	}
 
 	private void OnCollisionEnter2D(Collision2D collision) {
 		AudioSource.PlayClipAtPoint(_destroyedAudioClip, Camera.main.transform.position);
 		_levelManager.BlockDestroyed();
+		_gameStatus = FindObjectOfType<GameStatus>();
 		_gameStatus.AddPointsToScore();
 		Destroy(gameObject);
 	}
