@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1279695353664811204}
   - component: {fileID: 1279695353664811205}
   m_Layer: 0
-  m_Name: BreakableBlockRed
+  m_Name: BreakableBlock1Hit
   m_TagString: Breakable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -125,5 +125,6 @@ MonoBehaviour:
   _levelManager: {fileID: 0}
   _gameSession: {fileID: 0}
   _blockSparklesVFX: {fileID: 100000, guid: 7d846c02296ef4dc4abff04ce3e5262c, type: 3}
-  _maxHits: 2
+  _hitSprites: []
+  _maxHits: 1
   _timesHit: 0

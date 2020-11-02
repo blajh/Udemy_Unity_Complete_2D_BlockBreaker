@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +9,7 @@ public class Block : MonoBehaviour
 	[SerializeField] private LevelManager _levelManager;
 	[SerializeField] private GameSession _gameSession;
 	[SerializeField] private GameObject _blockSparklesVFX;
+	[SerializeField] private Sprite[] _hitSprites;
 
 	private bool isBreakable;
 	[SerializeField] private int _maxHits;
@@ -34,8 +36,15 @@ public class Block : MonoBehaviour
 			_timesHit++;
 			if (_timesHit >= _maxHits) {
 				DestroyBlock();
+			} else {
+				ShowNextHitSprite();
 			}
 		}
+	}
+
+	private void ShowNextHitSprite() {
+		var spriteIndex = _timesHit - 1;
+		GetComponent<SpriteRenderer>().sprite = _hitSprites[spriteIndex];
 	}
 
 	private void DestroyBlock() {
