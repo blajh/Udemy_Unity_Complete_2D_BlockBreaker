@@ -41,4 +41,8 @@ public class GameStatus : MonoBehaviour
 	private void UpdateScoreUI() {
 		scoreText.text = _currentScore.ToString();
 	}
+
+	public void ResetScore() {
+		Destroy(gameObject);
+	}
 }
