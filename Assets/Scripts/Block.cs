@@ -6,7 +6,7 @@ public class Block : MonoBehaviour
 {
 	[SerializeField] private AudioClip _destroyedAudioClip;
 	[SerializeField] private LevelManager _levelManager;
-	[SerializeField] private GameStatus _gameStatus;
+	[SerializeField] private GamesSession _gameStatus;
 
 	private void Start() {
 		_levelManager = FindObjectOfType<LevelManager>();
@@ -16,7 +16,7 @@ public class Block : MonoBehaviour
 	private void OnCollisionEnter2D(Collision2D collision) {
 		AudioSource.PlayClipAtPoint(_destroyedAudioClip, Camera.main.transform.position);
 		_levelManager.BlockDestroyed();
-		_gameStatus = FindObjectOfType<GameStatus>();
+		_gameStatus = FindObjectOfType<GamesSession>();
 		_gameStatus.AddPointsToScore();
 		Destroy(gameObject);
 	}

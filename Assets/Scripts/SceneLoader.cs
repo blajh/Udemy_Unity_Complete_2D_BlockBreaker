@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-	private GameStatus _gameStatus;
+	private GamesSession _gameStatus;
 
 	public void LoadNextScene () {
 		int sceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -14,7 +14,7 @@ public class SceneLoader : MonoBehaviour
 
 	public void LoadMenuScene() {
 		SceneManager.LoadScene(0);
-		_gameStatus = FindObjectOfType<GameStatus>();
+		_gameStatus = FindObjectOfType<GamesSession>();
 		_gameStatus.ResetGame();
 	}
 
