@@ -42,7 +42,7 @@ public class GameStatus : MonoBehaviour
 		scoreText.text = _currentScore.ToString();
 	}
 
-	public void ResetScore() {
+	public void ResetGame() {
 		Destroy(gameObject);
 	}
 }

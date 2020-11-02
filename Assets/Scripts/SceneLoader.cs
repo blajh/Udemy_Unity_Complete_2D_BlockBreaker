@@ -7,10 +7,6 @@ public class SceneLoader : MonoBehaviour
 {
 	private GameStatus _gameStatus;
 
-	private void Awake() {
-		_gameStatus = FindObjectOfType<GameStatus>();
-	}
-
 	public void LoadNextScene () {
 		int sceneIndex = SceneManager.GetActiveScene().buildIndex;
 		SceneManager.LoadScene(sceneIndex + 1);
@@ -18,7 +14,8 @@ public class SceneLoader : MonoBehaviour
 
 	public void LoadMenuScene() {
 		SceneManager.LoadScene(0);
-		_gameStatus.ResetScore();
+		_gameStatus = FindObjectOfType<GameStatus>();
+		_gameStatus.ResetGame();
 	}
 
 	public void QuitApplication() {
