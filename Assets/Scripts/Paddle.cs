@@ -6,16 +6,36 @@ public class Paddle : MonoBehaviour
 {
 	[SerializeField]
 	private float _screenWidthInUnits = 11.7f;
+    private GameSession _gameSession;
+	private BallBehaviour _ballBehaviour;
 
-    void Update()
+	private bool _isAutoPlayEnabled = false;
+
+	private void Awake() {
+		_gameSession = FindObjectOfType<GameSession>();
+		_ballBehaviour = FindObjectOfType<BallBehaviour>();
+	}
+
+	void Update()
     {
-        UpdatePaddlePosition();
+		_isAutoPlayEnabled = _gameSession.IsAutoPlayEnabled();
+		UpdatePaddlePosition();
     }
 
 	public void UpdatePaddlePosition() {
-        float mousePositionInUnits = Input.mousePosition.x / Screen.width * _screenWidthInUnits;
         Vector2 currentPosition = new Vector2(transform.position.x, transform.position.y);
-		currentPosition.x = Mathf.Clamp(mousePositionInUnits, 0f, _screenWidthInUnits);
+		currentPosition.x = Mathf.Clamp(GetXPosition(), 0f, _screenWidthInUnits);
         transform.position = currentPosition; 
     }
+
+	private float GetXPosition() {
+
+		if (_isAutoPlayEnabled) {
+			return _ballBehaviour.transform.position.x;
+		}
+		else {
+			return Input.mousePosition.x / Screen.width * _screenWidthInUnits;
+		}
+	}
+
 } 

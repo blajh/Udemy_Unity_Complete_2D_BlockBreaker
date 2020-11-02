@@ -13,6 +13,8 @@ public class GameSession : MonoBehaviour
 
 	public TMP_Text scoreText;
 
+	[SerializeField] private bool _isAutoPlayEnabled;
+
 	private void Awake() {
 		int gameStatusCount = FindObjectsOfType<GameSession>().Length;
 		if (gameStatusCount > 1) {
@@ -44,5 +46,9 @@ public class GameSession : MonoBehaviour
 
 	public void ResetGame() {
 		Destroy(gameObject);
+	}
+
+	public bool IsAutoPlayEnabled() {
+		return _isAutoPlayEnabled;
 	}
 }

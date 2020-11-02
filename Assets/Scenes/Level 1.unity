@@ -1967,6 +1967,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 805229181146974306, guid: f14e3a2f9090c4af5bc1fc6e4bd8456f,
+        type: 3}
+      propertyPath: _isAutoPlayEnabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1935041705189465497, guid: f14e3a2f9090c4af5bc1fc6e4bd8456f,
         type: 3}
       propertyPath: m_LocalPosition.x
