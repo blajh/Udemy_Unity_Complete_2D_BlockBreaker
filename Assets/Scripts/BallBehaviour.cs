@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BallBehaviour : MonoBehaviour
 {
@@ -16,9 +13,14 @@ public class BallBehaviour : MonoBehaviour
 	private AudioClip[] _ballAudioClips;
 	private AudioSource _audioSource;
 
+	[SerializeField]
+	private float _randomDirectionChangeFactor = 0.5f;
+	private Rigidbody2D _rigidbody2D;
+
 	private void Start() {
 		CalculateOffsetToPaddle();
 		_audioSource = GetComponent<AudioSource>();
+		_rigidbody2D = GetComponent<Rigidbody2D>();
 	}
 
 	private void Update() {
@@ -40,15 +42,26 @@ public class BallBehaviour : MonoBehaviour
 	private void LaunchOnMouseClick() {
 		if (Input.GetMouseButtonDown(0)) {
 			_hasBeenLaunched = true;
-			GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-			GetComponent<Rigidbody2D>().velocity = new Vector2(_xPushForce, _yPushForce);
+			_rigidbody2D.bodyType = RigidbodyType2D.Dynamic;
+			_rigidbody2D.velocity = new Vector2(_xPushForce, _yPushForce);
 		}
 	}
 
 	private void OnCollisionEnter2D(Collision2D collision) {
+		TweakVelocity();
 		if (_hasBeenLaunched) {
 			AudioClip randomAudioClip = _ballAudioClips[UnityEngine.Random.Range(0, _ballAudioClips.Length)];
 			_audioSource.PlayOneShot(randomAudioClip);
 		}
+	}
+
+	private void TweakVelocity() {
+		var _random = _randomDirectionChangeFactor;
+		Vector2 _velocityTweak = new Vector2 (RandomFloatRange(_random), RandomFloatRange(_random));
+		_rigidbody2D.velocity += _velocityTweak;
+	}
+
+	private float RandomFloatRange(float _randomFloat) {
+		return Random.Range(0f, _randomFloat);
 	}
 }

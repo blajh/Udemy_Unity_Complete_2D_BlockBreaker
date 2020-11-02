@@ -9,11 +9,10 @@ public class Block : MonoBehaviour
 	[SerializeField] private LevelManager _levelManager;
 	[SerializeField] private GameSession _gameSession;
 	[SerializeField] private GameObject _blockSparklesVFX;
-	[SerializeField] private Sprite[] _hitSprites;
 
 	private bool isBreakable;
-	[SerializeField] private int _maxHits;
 	[SerializeField] private int _timesHit;
+	[SerializeField] private Sprite[] _hitSprites;
 
 	private void Start() {
 		SetBreakability();
@@ -34,6 +33,7 @@ public class Block : MonoBehaviour
 	private void HandleHit() {
 		if (isBreakable) {
 			_timesHit++;
+			int _maxHits = _hitSprites.Length + 1;
 			if (_timesHit >= _maxHits) {
 				DestroyBlock();
 			} else {
@@ -43,8 +43,12 @@ public class Block : MonoBehaviour
 	}
 
 	private void ShowNextHitSprite() {
-		var spriteIndex = _timesHit - 1;
-		GetComponent<SpriteRenderer>().sprite = _hitSprites[spriteIndex];
+		int _spriteIndex = _timesHit - 1;
+		if (_hitSprites[_spriteIndex] != null) {
+			GetComponent<SpriteRenderer>().sprite = _hitSprites[_spriteIndex];
+		} else {
+			Debug.LogError("Block Sprite is missing from array: " + gameObject.name);
+		}
 	}
 
 	private void DestroyBlock() {
