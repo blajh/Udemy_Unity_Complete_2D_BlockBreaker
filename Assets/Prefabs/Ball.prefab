@@ -135,14 +135,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _paddle1: {fileID: 0}
-  _xPushForce: 2
-  _yPushForce: 10
+  _xPushForce: 1
+  _yPushForce: 8
   _ballAudioClips:
   - {fileID: 8300000, guid: 77b6a930fb65042b595418e87c49446b, type: 3}
   - {fileID: 8300000, guid: 08a867e36e82f41f5ae33d6d43faf7ef, type: 3}
   - {fileID: 8300000, guid: 57ceb7cc04e9945159bd0d8b953e0b34, type: 3}
   - {fileID: 8300000, guid: ac37baabd80d5423a881e29cca937ad7, type: 3}
   - {fileID: 8300000, guid: 64550776ec75a4b32800d77d90fc4053, type: 3}
+  _randomDirectionChangeFactor: 0.5
 --- !u!82 &8608450070406122845
 AudioSource:
   m_ObjectHideFlags: 0
