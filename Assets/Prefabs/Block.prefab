@@ -123,3 +123,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _destroyedAudioClip: {fileID: 8300000, guid: 4fc5a74506eff4293a76171da1c6feee, type: 3}
   _levelManager: {fileID: 0}
+  _gameSession: {fileID: 0}
+  _blockSparklesVFX: {fileID: 100000, guid: 7d846c02296ef4dc4abff04ce3e5262c, type: 3}

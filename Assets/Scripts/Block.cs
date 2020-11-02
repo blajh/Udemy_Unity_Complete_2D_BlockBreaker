@@ -6,7 +6,8 @@ public class Block : MonoBehaviour
 {
 	[SerializeField] private AudioClip _destroyedAudioClip;
 	[SerializeField] private LevelManager _levelManager;
-	[SerializeField] private GameSession gameSession;
+	[SerializeField] private GameSession _gameSession;
+	[SerializeField] private GameObject _blockSparklesVFX;
 
 	private void Start() {
 		_levelManager = FindObjectOfType<LevelManager>();
@@ -14,10 +15,28 @@ public class Block : MonoBehaviour
 	}
 
 	private void OnCollisionEnter2D(Collision2D collision) {
-		AudioSource.PlayClipAtPoint(_destroyedAudioClip, Camera.main.transform.position);
+		DestroyBlock ();
+	}
+
+	private void DestroyBlock() {
+		PlayBlockDestroySFX();
 		_levelManager.BlockDestroyed();
-		gameSession = FindObjectOfType<GameSession>();
-		gameSession.AddPointsToScore();
+		AddToScore();
+		TriggerSparklesVFX();
 		Destroy(gameObject);
+	}
+
+	private void PlayBlockDestroySFX() {
+		AudioSource.PlayClipAtPoint(_destroyedAudioClip, Camera.main.transform.position);
+	}
+
+	private void AddToScore() {
+		_gameSession = FindObjectOfType<GameSession>();
+		_gameSession.AddPointsToScore();
+	}
+
+	private void TriggerSparklesVFX () {
+		var _sparkles = Instantiate(_blockSparklesVFX, transform.position, transform.rotation);
+		Destroy(_sparkles, 2f);
 	}
 }
