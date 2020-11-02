@@ -9,13 +9,33 @@ public class Block : MonoBehaviour
 	[SerializeField] private GameSession _gameSession;
 	[SerializeField] private GameObject _blockSparklesVFX;
 
+	private bool isBreakable;
+	[SerializeField] private int _maxHits;
+	[SerializeField] private int _timesHit;
+
 	private void Start() {
-		_levelManager = FindObjectOfType<LevelManager>();
-		_levelManager.AddBlock();
+		SetBreakability();
+		CountBreakableBlocks();
+	}
+
+	private void CountBreakableBlocks() {
+		if (isBreakable) {
+			_levelManager = FindObjectOfType<LevelManager>();
+			_levelManager.AddBlock();
+		}
 	}
 
 	private void OnCollisionEnter2D(Collision2D collision) {
-		DestroyBlock ();
+		HandleHit();
+	}
+
+	private void HandleHit() {
+		if (isBreakable) {
+			_timesHit++;
+			if (_timesHit >= _maxHits) {
+				DestroyBlock();
+			}
+		}
 	}
 
 	private void DestroyBlock() {
@@ -38,5 +58,14 @@ public class Block : MonoBehaviour
 	private void TriggerSparklesVFX () {
 		var _sparkles = Instantiate(_blockSparklesVFX, transform.position, transform.rotation);
 		Destroy(_sparkles, 2f);
+	}
+
+	private void SetBreakability() {
+		if (tag == "Breakable") {
+			isBreakable = true;
+		}
+		else if (tag == "Unbreakable") {
+			isBreakable = false;
+		}
 	}
 }
